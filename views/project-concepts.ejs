@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Concepts - PROJECT LENS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="brand">PROJECT <span>LENS</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/project-concepts" class="active">Concepts</a>
+      <a href="/features">Features & Scope</a>
+      <a href="/contributors">Contributors</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="content-box">
+    <span class="badge">In-Depth Analysis</span>
+    <h1>Recognition of Need & System Concepts</h1>
+    <p>A structured diagnostic of bKash Limited—Bangladesh's premier MFS provider serving over 70 million users across dual B2C and B2B operational models.</p>
+
+    <hr class="section-divider">
+
+    <h2>1. The Four Core System Bottlenecks</h2>
+    <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+      <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <h3 style="color: var(--primary); margin-bottom: 6px;">Problem 01: Lack of International Payment Collaboration</h3>
+        <p style="font-size: 0.95rem; margin-bottom: 0;">bKash currently lacks direct interoperability with dominant global gateways such as PayPal, Payoneer, or Wise. This limitation compels the rapidly growing community of freelancers, IT exports, and remote earners to depend on high-fee third-party workarounds or informal remittance channels, reducing bKash's competitiveness in cross-border settlements.</p>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <h3 style="color: var(--primary); margin-bottom: 6px;">Problem 02: Server Concurrency & Unconfirmed Deductions</h3>
+        <p style="font-size: 0.95rem; margin-bottom: 0;">During peak loads (such as festivals or salary disbursement cycles), latency spikes in backend synchronization cause account balances to be debited before the user-facing confirmation ledger confirms completion. This creates customer distress and increases support burdens on helpline and agent personnel.</p>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <h3 style="color: var(--primary); margin-bottom: 6px;">Problem 03: Disproportionate Cash-Out & Send-Money Charges</h3>
+        <p style="font-size: 0.95rem; margin-bottom: 0;">Percentage-based transaction deductions remain uniform regardless of user tenure or transfer frequency. For lower-to-middle income segments utilizing bKash for regular micro-transactions, these cumulative tariffs discourage frequent engagement and push price-sensitive demographics toward informal cash mechanisms.</p>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <h3 style="color: var(--primary); margin-bottom: 6px;">Problem 04: Restrictive Static Daily Transaction Thresholds</h3>
+        <p style="font-size: 0.95rem; margin-bottom: 0;">Standardized regulatory ceilings fail to differentiate between fully verified long-term enterprise clients and newly opened accounts. Merchants, corporate vendors, and emergency remitters are forced to split larger capital disbursements over multiple days.</p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>2. Field Research & Empirical Survey Data</h2>
+    <p>Field data was gathered through on-site observations at Dhaka Customer Care counters and agent hubs, alongside structured questionnaires completed by 200 users and 50 agents/employees:</p>
+
+    <ul class="feature-list">
+      <li><strong>Cross-Border Demand:</strong> 72% of surveyed agents and staff strongly favor direct integration with global payment engines like PayPal.</li>
+      <li><strong>Peak Failure Frequency:</strong> 34% of transactors reported experiencing a transaction where funds were deducted before receiving confirmation.</li>
+      <li><strong>Pricing Sensitivity:</strong> 58% of respondents categorize standard cash-out fees as either "High" (38%) or "Very High" (20%).</li>
+      <li><strong>Threshold Sufficiency:</strong> 50% of respondents rated existing daily limits as restrictive or inadequate for larger commerce requirements.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>3. System Data Flow Overview (Existing Workflow)</h2>
+    <p>The standard transaction processing pipeline follows a 5-stage sequential architecture:</p>
+    <ul class="feature-list">
+      <li><strong>1. Transaction Initiation:</strong> User sends Cash-In, Cash-Out, or Send Money requests via App or USSD (*247#).</li>
+      <li><strong>2. Authentication:</strong> System verifies encrypted PIN and 2FA/OTP tokens against Customer Account storage.</li>
+      <li><strong>3. Core Ledger Execution:</strong> Core balances are debited/credited in the Balance Database.</li>
+      <li><strong>4. Log Ingestion:</strong> Status data is pushed to Transaction Log files for analytics and audit compliance.</li>
+      <li><strong>5. Confirmation Dispatch:</strong> Push notifications and SMS confirmations are routed to both customer and merchant endpoints.</li>
+    </ul>
+
+    <div style="margin-top: 36px; display: flex; gap: 14px;">
+      <a href="/features" class="btn">Examine Proposed Architecture &rarr;</a>
+      <a href="/" class="btn btn-secondary">&larr; Return to Home</a>
+    </div>
+  </div>
+
+</body>
+</html>
