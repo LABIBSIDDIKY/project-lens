@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 3: System Analysis - PROJECT LENS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="brand">PROJECT <span>LENS</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/project-concepts">Concepts</a>
+      <a href="/features">Features & Scope</a>
+      <a href="/chapter-1">Ch 1</a>
+      <a href="/chapter-2">Ch 2</a>
+      <a href="/chapter-3" class="active">Ch 3</a>
+      <a href="/chapter-4">Ch 4</a>
+      <a href="/contributors">Team</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="content-box">
+    <span class="badge">Chapter 3 Analysis</span>
+    <h1>Analysis & Empirical Research</h1>
+    <p>Field data synthesis, operational DFD workflows, full financial breakdowns, and break-even calculations[cite: 1].</p>
+
+    <hr class="section-divider">
+
+    <h2>3.1 Field Study & Questionnaire Metrics</h2>
+    <p>Data was collected through on-site observations at Dhaka Customer Care centers and agent points, accompanied by surveys conducted across 200 users and 50 agents/employees[cite: 1]:</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 18px 0 24px 0;">
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <div style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">72%</div>
+        <p style="font-size: 0.9rem; margin: 0;">Agents & staff demanding direct integration with PayPal/Wise[cite: 1].</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <div style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">34%</div>
+        <p style="font-size: 0.9rem; margin: 0;">Transactors experiencing deducted balances without prompt confirmations[cite: 1].</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <div style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">58%</div>
+        <p style="font-size: 0.9rem; margin: 0;">Users evaluating standard cash-out fees as "High" (38%) or "Very High" (20%)[cite: 1].</p>
+      </div>
+      <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
+        <div style="color: var(--primary); font-size: 1.8rem; font-weight: 800;">50%</div>
+        <p style="font-size: 0.9rem; margin: 0;">Respondents citing static daily transaction limits as restrictive[cite: 1].</p>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>3.2 Existing System Data Flow (DFD Overview)</h2>
+    <ul class="feature-list">
+      <li><strong>1. Initiate Transaction:</strong> User submits request via USSD (*247#) or Mobile App[cite: 1].</li>
+      <li><strong>2. Verify PIN / OTP:</strong> Security authentication verifies identity against Customer Info datastores[cite: 1].</li>
+      <li><strong>3. Process Transaction:</strong> Balance adjustments are applied across the Balance/Ledger DB[cite: 1].</li>
+      <li><strong>4. Update Ledger:</strong> Status logs are written to the centralized Transaction Log file[cite: 1].</li>
+      <li><strong>5. Send Confirmation:</strong> SMS and push confirmations are routed to both customer and merchant terminals[cite: 1].</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>3.3 Cost-Benefit Analysis (Year 1 Budget)</h2>
+    <div style="overflow-x: auto; margin-bottom: 20px;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 1px solid var(--border-card); color: var(--primary);">
+            <th style="padding: 10px 14px;">Cost Category</th>
+            <th style="padding: 10px 14px;">Allocations</th>
+            <th style="padding: 10px 14px;">Subtotal ($)</th>
+          </tr>
+        </thead>
+        <tbody style="color: #cbd5e1;">
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <td style="padding: 10px 14px;">Hardware Costs</td>
+            <td style="padding: 10px 14px;">Servers ($50k), HSM Security ($15k), Network & Backup ($15k)[cite: 1]</td>
+            <td style="padding: 10px 14px;">$80,000[cite: 1]</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <td style="padding: 10px 14px;">Personnel Costs</td>
+            <td style="padding: 10px 14px;">Engineer Salaries ($100k), Training ($10k), Bonuses & Allowances ($40k)[cite: 1]</td>
+            <td style="padding: 10px 14px;">$150,000[cite: 1]</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <td style="padding: 10px 14px;">Facility Costs</td>
+            <td style="padding: 10px 14px;">Data Center Lease ($40k), Renovation, Utilities & Security ($45k)[cite: 1]</td>
+            <td style="padding: 10px 14px;">$85,000[cite: 1]</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <td style="padding: 10px 14px;">Operating Costs</td>
+            <td style="padding: 10px 14px;">Support Operations ($20k), Gateway Licenses & SMS API ($25k)[cite: 1]</td>
+            <td style="padding: 10px 14px;">$45,000[cite: 1]</td>
+          </tr>
+          <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+            <td style="padding: 10px 14px;">Cloud & Integration</td>
+            <td style="padding: 10px 14px;">Cloud Scaling ($150k), International API ($60k), Fraud System ($70k), Audit ($20k)[cite: 1]</td>
+            <td style="padding: 10px 14px;">$300,000[cite: 1]</td>
+          </tr>
+          <tr style="font-weight: bold; color: var(--primary);">
+            <td style="padding: 10px 14px;">TOTAL ANNUAL OUTLAY</td>
+            <td style="padding: 10px 14px;">Fixed Costs ($500k) + Variable ($200k) + Operating ($100k)[cite: 1]</td>
+            <td style="padding: 10px 14px;">$800,000[cite: 1]</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>3.4 Break-Even Point (BEP) Analysis</h2>
+    <p>Financial viability for the international gateway was calculated using unit economics[cite: 1]:</p>
+    <ul class="feature-list">
+      <li><strong>Fixed Gateway Cost (F):</strong> $50,000[cite: 1]</li>
+      <li><strong>Variable Cost per Transaction (V):</strong> $3[cite: 1]</li>
+      <li><strong>Service Fee Revenue per Transaction (P):</strong> $5[cite: 1]</li>
+      <li><strong>Formula:</strong> $BEPu = \frac{F}{P - V} = \frac{50,000}{5 - 3} = \mathbf{25,000\text{ transactions}}$[cite: 1]</li>
+    </ul>
+    <p style="font-size: 0.95rem;">Processing only 25,000 transactions recoups initial integration investments[cite: 1]. Across bKash's multi-million active user base, this volume is readily achievable[cite: 1].</p>
+
+    <div style="margin-top: 36px; display: flex; gap: 14px;">
+      <a href="/chapter-4" class="btn">Proceed to Chapter 4 &rarr;</a>
+      <a href="/chapter-2" class="btn btn-secondary">&larr; Chapter 2</a>
+    </div>
+  </div>
+
+</body>
+</html>

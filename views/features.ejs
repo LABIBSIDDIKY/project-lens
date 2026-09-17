@@ -14,7 +14,11 @@
       <a href="/">Home</a>
       <a href="/project-concepts">Concepts</a>
       <a href="/features" class="active">Features & Scope</a>
-      <a href="/contributors">Contributors</a>
+      <a href="/chapter-1">Ch 1</a>
+      <a href="/chapter-2">Ch 2</a>
+      <a href="/chapter-3">Ch 3</a>
+      <a href="/chapter-4">Ch 4</a>
+      <a href="/contributors">Team</a>
       <a href="/contact">Contact</a>
     </div>
   </nav>
@@ -22,7 +26,7 @@
   <div class="content-box">
     <span class="badge">Architecture & Evaluation</span>
     <h1>Candidate Systems & System Feasibility</h1>
-    <p>To resolve transactional lag and cross-border limitations, two upgrade architectures were modeled, cost-assessed, and benchmarked using a formal decision matrix.</p>
+    <p>To resolve transactional lag and cross-border limitations, two upgrade architectures were modeled, cost-assessed, and benchmarked using a formal decision matrix[cite: 1].</p>
 
     <hr class="section-divider">
 
@@ -39,28 +43,28 @@
         <tbody style="color: #cbd5e1;">
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
             <td style="padding: 12px 16px;"><strong>Deployment Channels</strong></td>
-            <td style="padding: 12px 16px;">App, USSD (*247#) & Web Portal</td>
-            <td style="padding: 12px 16px;">App & USSD (*247#) Only</td>
+            <td style="padding: 12px 16px;">App, USSD (*247#) & Web Portal[cite: 1]</td>
+            <td style="padding: 12px 16px;">App & USSD (*247#) Only[cite: 1]</td>
           </tr>
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
             <td style="padding: 12px 16px;"><strong>International Gateway</strong></td>
-            <td style="padding: 12px 16px; color: #4ade80;">Yes (PayPal/Wise/Payoneer APIs)</td>
-            <td style="padding: 12px 16px; color: #f87171;">Deferred to Phase 2</td>
+            <td style="padding: 12px 16px; color: #4ade80;">Yes (PayPal/Wise/Payoneer APIs)[cite: 1]</td>
+            <td style="padding: 12px 16px; color: #f87171;">Deferred to Phase 2[cite: 1]</td>
           </tr>
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
             <td style="padding: 12px 16px;"><strong>Automated Reconciliation</strong></td>
-            <td style="padding: 12px 16px; color: #4ade80;">Real-time automated dispute resolution</td>
-            <td style="padding: 12px 16px; color: #4ade80;">Real-time automated dispute resolution</td>
+            <td style="padding: 12px 16px; color: #4ade80;">Real-time automated dispute resolution[cite: 1]</td>
+            <td style="padding: 12px 16px; color: #4ade80;">Real-time automated dispute resolution[cite: 1]</td>
           </tr>
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
             <td style="padding: 12px 16px;"><strong>Scalable Infrastructure</strong></td>
-            <td style="padding: 12px 16px;">Distributed auto-scaling cloud cluster</td>
-            <td style="padding: 12px 16px;">On-premise / hybrid auto-scaling</td>
+            <td style="padding: 12px 16px;">Distributed auto-scaling cloud cluster[cite: 1]</td>
+            <td style="padding: 12px 16px;">On-premise / hybrid auto-scaling[cite: 1]</td>
           </tr>
           <tr>
             <td style="padding: 12px 16px;"><strong>Weighted Selection Score</strong></td>
-            <td style="padding: 12px 16px; font-weight: bold; color: var(--primary);">98 / 120 (Selected Path)</td>
-            <td style="padding: 12px 16px;">89 / 120</td>
+            <td style="padding: 12px 16px; font-weight: bold; color: var(--primary);">98 / 120 (Selected Path)[cite: 1]</td>
+            <td style="padding: 12px 16px;">89 / 120[cite: 1]</td>
           </tr>
         </tbody>
       </table>
@@ -69,42 +73,42 @@
     <hr class="section-divider">
 
     <h2>2. Cost-Benefit & Financial Feasibility Analysis</h2>
-    <p>Implementation requirements were budgeted across capital investments, operational maintenance, and dynamic gateway service tiers:</p>
+    <p>Implementation requirements were budgeted across capital investments, operational maintenance, and dynamic gateway service tiers[cite: 1]:</p>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0;">
       <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
         <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Fixed Capital Cost</div>
-        <div style="font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">$500,000</div>
-        <div style="font-size: 0.85rem; color: #94a3b8;">Servers, API hooks & HSM security</div>
+        <div style="font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">$500,000[cite: 1]</div>
+        <div style="font-size: 0.85rem; color: #94a3b8;">Servers, API hooks & HSM security[cite: 1]</div>
       </div>
       <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
         <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Variable Operating</div>
-        <div style="font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">$200,000</div>
-        <div style="font-size: 0.85rem; color: #94a3b8;">5% of transaction volume yield</div>
+        <div style="font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">$200,000[cite: 1]</div>
+        <div style="font-size: 0.85rem; color: #94a3b8;">5% of transaction volume yield[cite: 1]</div>
       </div>
       <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-card); padding: 16px; border-radius: 10px;">
         <div style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Annual Maintenance</div>
-        <div style="font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">$100,000</div>
-        <div style="font-size: 0.85rem; color: #94a3b8;">Operations & customer support</div>
+        <div style="font-size: 1.6rem; font-weight: 700; color: #fff; margin: 4px 0;">$100,000[cite: 1]</div>
+        <div style="font-size: 0.85rem; color: #94a3b8;">Operations & customer support[cite: 1]</div>
       </div>
       <div style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.3); padding: 16px; border-radius: 10px;">
         <div style="font-size: 0.8rem; color: var(--primary); text-transform: uppercase;">Total Year 1 Outlay</div>
-        <div style="font-size: 1.6rem; font-weight: 700; color: var(--primary); margin: 4px 0;">$800,000</div>
-        <div style="font-size: 0.85rem; color: #94a3b8;">Complete turnkey deployment</div>
+        <div style="font-size: 1.6rem; font-weight: 700; color: var(--primary); margin: 4px 0;">$800,000[cite: 1]</div>
+        <div style="font-size: 0.85rem; color: #94a3b8;">Complete turnkey deployment[cite: 1]</div>
       </div>
     </div>
 
     <hr class="section-divider">
 
     <h2>3. Break-Even Metric: International Gateway Module</h2>
-    <p>A focused break-even evaluation was modeled for the integrated cross-border gateway feature:</p>
+    <p>A focused break-even evaluation was modeled for the integrated cross-border gateway feature[cite: 1]:</p>
     <ul class="feature-list">
-      <li><strong>Gateway Fixed Cost (F):</strong> $50,000 for compliance, API setup, and gateway licensing.</li>
-      <li><strong>Variable Expense per Tx (V):</strong> $3 per transaction in partner processing network costs.</li>
-      <li><strong>Service Fee Revenue per Tx (P):</strong> $5 per transaction consumer gateway fee.</li>
-      <li><strong>Break-Even Volume:</strong> $BEPu = \frac{F}{P - V} = \frac{50,000}{5 - 3} =$ <strong>25,000 transactions</strong>.</li>
+      <li><strong>Gateway Fixed Cost (F):</strong> $50,000 for compliance, API setup, and gateway licensing[cite: 1].</li>
+      <li><strong>Variable Expense per Tx (V):</strong> $3 per transaction in partner processing network costs[cite: 1].</li>
+      <li><strong>Service Fee Revenue per Tx (P):</strong> $5 per transaction consumer gateway fee[cite: 1].</li>
+      <li><strong>Break-Even Volume:</strong> $BEPu = \frac{F}{P - V} = \frac{50,000}{5 - 3} =$ <strong>25,000 transactions</strong>[cite: 1].</li>
     </ul>
-    <p style="font-size: 0.95rem; margin-top: 10px;">Processing just 25,000 cross-border transfers across bKash's 70-million-user ecosystem completely recoups the gateway setup investment, proving strong financial viability.</p>
+    <p style="font-size: 0.95rem; margin-top: 10px;">Processing just 25,000 cross-border transfers across bKash's 70-million-user ecosystem completely recoups the gateway setup investment, proving strong financial viability[cite: 1].</p>
 
     <div style="margin-top: 36px; display: flex; gap: 14px;">
       <a href="/project-concepts" class="btn btn-secondary">&larr; Back to Concepts</a>
